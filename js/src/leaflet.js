@@ -1,4 +1,5 @@
 const L = require('leaflet');
+const Gp = require('geoportal-extensions-leaflet');
 require('proj4');
 require('proj4leaflet');
 require('leaflet-defaulticon-compatibility');
