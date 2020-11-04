@@ -39,7 +39,20 @@ module.exports = [
         module: {
             rules: rules
         },
-        externals: ['@jupyter-widgets/base']
+        externals: [
+            '@jupyter-widgets/base',
+            {
+                fs: 'empty',
+                global: true,
+                crypto: 'empty',
+                tls: 'empty',
+                net: 'empty',
+                process: true,
+                module: false,
+                clearImmediate: false,
+                setImmediate: false
+            }
+        ]
     },
     {// jupyter-leaflet bundle for unpkg
         entry: './src/embed.js',
@@ -53,6 +66,19 @@ module.exports = [
         module: {
             rules: rules
         },
-        externals: ['@jupyter-widgets/base']
+        externals: [
+            '@jupyter-widgets/base',
+            {
+                fs: 'empty',
+                global: true,
+                crypto: 'empty',
+                tls: 'empty',
+                net: 'empty',
+                process: true,
+                module: false,
+                clearImmediate: false,
+                setImmediate: false
+            }
+        ]
     }
 ];
